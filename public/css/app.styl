@@ -1,0 +1,57 @@
+@import "public/normalize.css"
+@import "temas.styl"
+@import "index.styl"
+
+h1, h2, h3, h4, h5
+  margin 0
+  padding 0
+
+body
+  font-family "Source Sans Pro", sans-serif
+  font-size 22px
+  background-color var(--color-fondo)
+  color var(--color-texto)
+
+h1, h2, h3, h4, h5
+  font-family "Roboto Slab", serif
+
+h3, h4, h5
+  font-weight normal
+
+.cabecera
+  height 5rem
+  background-color var(--color-fondo-2)
+
+.contenedor-cabecera
+  display grid
+  grid-template-columns 18rem auto
+  height 5rem
+
+.titulo-pagina
+  display inline-block
+  padding 0.5rem 0
+
+.formulario-busqueda
+  display flex
+  height 100%
+  align-items center
+
+.input-busqueda
+  display inline-block
+  vertical-align middle
+  width 30rem
+  padding 0.5rem
+  border-radius 0.2rem
+  border solid 0.2rem #ff1a96
+  background-color var(--color-fondo)
+  color var(--color-texto)
+
+.contenedor-general
+  margin 0 auto
+  max-width 90rem
+  width 80%
+
+.contenedor-texto
+  background-color var(--color-fondo-2)
+  border-radius 3px
+  padding 0.75rem

@@ -1,0 +1,33 @@
+{
+  "name": "jergazb",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "less-middleware": "~2.2.1",
+    "morgan": "~1.9.1",
+    "normalize.css": "^8.0.1",
+    "postgres": "^1.0.2",
+    "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express": "^4.17.9",
+    "@types/http-errors": "^1.8.0",
+    "@types/less-middleware": "^2.0.31",
+    "@types/morgan": "^1.9.2",
+    "@types/node": "^14.14.9",
+    "nodemon": "^2.0.6",
+    "stylus": "^0.54.8",
+    "typescript": "^4.1.2"
+  }
+}

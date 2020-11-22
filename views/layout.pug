@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title= title
+        link(rel="stylesheet" href="/css/app.css")
+
+        // Fuentes
+        link(href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;800&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet")
+
+        meta(name="description" content="Definiciones de jergas usadas en varios paises de habla hispana.")
+
+    body.tema-automatico
+        header.cabecera
+            .contenedor-general.contenedor-cabecera
+                h1.titulo-pagina Jergaz.com
+                form.formulario-busqueda
+                    input.input-busqueda(type="text" placeholder="Ingresa cualquier palabra")
+
+        block content

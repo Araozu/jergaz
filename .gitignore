@@ -1,0 +1,6 @@
+.idea
+**/*.js
+.env
+public/css/*.css
+
+node_modules
