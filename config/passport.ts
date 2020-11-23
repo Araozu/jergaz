@@ -11,10 +11,11 @@ export default (passport: passport.PassportStatic) => {
         },
         async (accessToken: string, refreshToken: string, profile: Profile, done: VerifyCallback) => {
             try {
-                const usuario = await Usuario.findOne({UsuId: profile.id} as unknown as NonNullFindOptions);
+                const usuario = await Usuario.findByPk(profile.id);
 
                 if (usuario) {
-                    done(undefined, usuario);
+                    // @ts-ignore
+                    done(undefined, usuario.dataValues);
                 } else {
                     const nuevoUsuario = Usuario.build({
                         UsuId: profile.id,
@@ -35,8 +36,11 @@ export default (passport: passport.PassportStatic) => {
         done(null, user.UsuId);
     });
 
-    passport.deserializeUser<_Usuario, string>(async (id, done) => {
-        done(await Usuario.findByPk(id));
+    passport.deserializeUser<any, string>(async (id, done) => {
+        const resultado = await Usuario.findByPk(id);
+        // @ts-ignore
+        done(undefined, resultado?.dataValues ?? false);
     });
+
 };
 

@@ -29,8 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
     secret: "Cc38%YIZC^mnSSB88Z%aoo2f",
     resave: false,
-    saveUninitialized: false,
-    cookie: {secure: true}
+    saveUninitialized: false
 }));
 
 // Passport middleware
