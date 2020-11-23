@@ -8,6 +8,19 @@ block content
             p Algun dia...
 
         .contenedor-crear-definicion
-            h2 Iniciar sesion
-            p con Google
-            a(href="/auth/google") Iniciar sesión con Google
+            if estaAutenticado
+                h2 Iniciar sesion
+                p con Google
+                a(href="/auth/google") Iniciar sesión con Google
+            else
+                h2 ¡Define una expresión!
+                form
+                    label(for="titulo-def") Título
+                    br
+                    input#titulo-def(placeholder="Título" type="text")
+                    br
+                    label(for="definicion-def") Definicion
+                    br
+                    textarea#definicion-def
+                    br
+                    input(type="submit" value="¡Crear!")

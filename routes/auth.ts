@@ -15,8 +15,6 @@ router.get(
         failureRedirect: "/error"
     }),
     (req, res) => {
-        console.log("Redirigiendo tras autenticar...")
-        console.log(req.isAuthenticated());
         res.redirect("/")
     }
 );
