@@ -9,10 +9,6 @@ block content
 
         .contenedor-crear-definicion
             if estaAutenticado
-                h2 Iniciar sesion
-                p con Google
-                a(href="/auth/google") Iniciar sesión con Google
-            else
                 h2 ¡Define una expresión!
                 form
                     label(for="titulo-def") Título
@@ -24,3 +20,7 @@ block content
                     textarea#definicion-def
                     br
                     input(type="submit" value="¡Crear!")
+            else
+                h2 Iniciar sesion
+                p con Google
+                a(href="/auth/google") Iniciar sesión con Google
