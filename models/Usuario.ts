@@ -1,5 +1,7 @@
-import { Sequelize, Model, DataTypes } from "sequelize";
+import { Model, DataTypes } from "sequelize";
 import { sequelize } from "./sequelize";
+import { Entrada } from "./Entrada";
+import { Definicion } from "./Definicion";
 
 export interface _Usuario {
     UsuId: string,
@@ -24,9 +26,16 @@ Usuario.init(
         UsuFoto: {
             type: DataTypes.STRING
         }
-    }, {
+    },
+    {
         sequelize,
-        modelName: "Usuario"
+        modelName: "Usuario",
+        tableName: "Usuarios"
     }
 );
 
+Usuario.hasMany(Entrada);
+Entrada.belongsTo(Usuario);
+
+Usuario.hasMany(Definicion);
+Definicion.belongsTo(Usuario);
