@@ -13,6 +13,12 @@ Definicion.init(
         },
         DefTxt: {
             type: DataTypes.TEXT
+        },
+        EntradaEntId: {
+            type: DataTypes.INTEGER
+        },
+        UsuarioUsuId: {
+            type: DataTypes.STRING(25)
         }
     },
     {

@@ -14,6 +14,9 @@ Entrada.init(
         },
         EntNom: {
             type: DataTypes.TEXT
+        },
+        UsuarioUsuId: {
+            type: DataTypes.STRING(25)
         }
     },
     {
@@ -25,3 +28,4 @@ Entrada.init(
 
 Entrada.hasMany(Definicion);
 Definicion.belongsTo(Entrada);
+

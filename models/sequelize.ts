@@ -8,4 +8,4 @@ export const sequelize = new Sequelize(
         dialect: "postgres"
     });
 
-sequelize.sync();
+sequelize.sync({force: true});
